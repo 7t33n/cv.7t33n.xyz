@@ -1,0 +1,5 @@
+main { max-width: 840px; margin: 40px auto; padding: 0 16px; }
+pre code { white-space: pre-wrap; }
+article :is(h1,h2,h3) { scroll-margin-top: 80px; }
+nav#toc { margin-bottom: 2rem; }
+.muted { color: #68707d; font-size: 0.9rem; }

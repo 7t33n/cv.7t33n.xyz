@@ -1,0 +1,35 @@
+{
+  "name": "cv.7t33n.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ts-node build/build.ts",
+    "build:watch": "nodemon --watch content --watch public --watch build --ext ts,md,html,css --exec 'ts-node build/build.ts'",
+    "serve": "http-server dist -p 8080 -c-1",
+    "dev": "concurrently -n build,serve -c auto 'npm:build:watch' 'npm:serve'"
+  },
+  "keywords": [
+    "cv",
+    "Dmitry",
+    "Kulikov",
+    "Dmitry Kulikov",
+    "7t33n",
+    "seventeen"
+  ],
+  "author": "Dmitry Kulikov",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^24.2.1",
+    "concurrently": "^9.2.0",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
