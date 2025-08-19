@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node build/build.ts",
-    "build:watch": "nodemon --watch content --watch public --watch build --ext ts,md,html,css --exec 'ts-node build/build.ts'",
+    "build": "tsx build/build.ts",
+    "build:watch": "nodemon --watch content --watch public --watch build --ext ts,md,html,css --exec 'tsx build/build.ts'",
     "serve": "http-server dist -p 8080 -c-1",
     "dev": "concurrently -n build,serve -c auto 'npm:build:watch' 'npm:serve'"
   },
+  "type": "module",
   "keywords": [
     "cv",
     "Dmitry",

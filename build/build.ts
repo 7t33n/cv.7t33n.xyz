@@ -1,47 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
 import MarkdownIt from "markdown-it";
-import { FrontMatterResult, BuildConfig } from "./types";
-
-function parseFrontMatter(md: string): FrontMatterResult {
-  const fmMatch = md.match(/^---\s*([\s\S]*?)\s*---\s*\n?/);
-  if (!fmMatch) return { body: md };
-
-  const fm = fmMatch[1];
-  const body = md.slice(fmMatch[0].length);
-  const frontMatter: Record<string, any> = {};
-
-  const lines = fm.split('\n').filter(line => line.trim());
-
-  for (const line of lines) {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex === -1) continue;
-
-    const key = line.slice(0, colonIndex).trim();
-    let value = line.slice(colonIndex + 1).trim();
-
-    value = value.replace(/^["']|["']$/g, "");
-
-    if (value === 'true' || value === 'false') {
-      frontMatter[key] = value === 'true';
-    } else if (!isNaN(Number(value)) && value !== '') {
-      frontMatter[key] = Number(value);
-    } else if (value.startsWith('[') && value.endsWith(']')) {
-      try {
-        const arrayContent = value.slice(1, -1);
-        frontMatter[key] = arrayContent
-          .split(',')
-          .map(item => item.trim().replace(/^["']|["']$/g, ""));
-      } catch {
-        frontMatter[key] = value;
-      }
-    } else {
-      frontMatter[key] = value;
-    }
-  }
-
-  return { body, ...frontMatter };
-}
+import { BuildConfig } from "./types";
+import { parseFrontMatter } from "./utils/frontMatter.utils";
+import { fileExists, copyDirectory, findFiles } from "./utils/fs.utils";
+import { escapeHtml } from "./utils/format.utils";
 
 async function loadTemplate(templatePath: string, variables: Record<string, string>): Promise<string> {
   let template = await fs.readFile(templatePath, "utf8");
@@ -52,62 +15,6 @@ async function loadTemplate(templatePath: string, variables: Record<string, stri
   }
 
   return template;
-}
-
-function escapeHtml(s: string) {
-  return s.replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;");
-}
-
-async function fileExists(filePath: string): Promise<boolean> {
-  try {
-    await fs.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-async function copyDirectory(src: string, dest: string): Promise<void> {
-  const entries = await fs.readdir(src, { withFileTypes: true });
-
-  await fs.mkdir(dest, { recursive: true });
-
-  for (const entry of entries) {
-    const srcPath = path.join(src, entry.name);
-    const destPath = path.join(dest, entry.name);
-
-    if (entry.isDirectory()) {
-      await copyDirectory(srcPath, destPath);
-    } else {
-      await fs.copyFile(srcPath, destPath);
-    }
-  }
-}
-
-async function findFiles(dir: string, extension: string): Promise<string[]> {
-  const files: string[] = [];
-
-  try {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name);
-
-      if (entry.isDirectory()) {
-        const subFiles = await findFiles(fullPath, extension);
-        files.push(...subFiles);
-      } else if (entry.name.endsWith(extension)) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    console.warn(`Warning: Could not read directory ${dir}: ${error}`);
-  }
-
-  return files;
 }
 
 async function validateConfig(config: BuildConfig): Promise<void> {

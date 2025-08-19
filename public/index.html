@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{{title}}</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <header class="header">
+    <div class="header__logo">7t33n</div>
+
+    <div class="header__right">
+      <nav class="header__lang" aria-label="Language selector">
+        <a class="header__lang-item" href="/index.html">EN</a>
+        <a class="header__lang-item" href="/ru.html">RU</a>
+      </nav>
+
+      <div class="header__links">
+        <a class="header__link" href="https://github.com/7t33n/cv.7t33n.xyz" aria-label="GitHub repository">
+          <img class="header__link-icon header__link-icon--github" src="./assets/github.svg" alt="GitHub" />
+        </a>
+      </div>
+    </div>
+  </header>
   <main>
     <article class="markdown-body">
       {{content}}
     </article>
   </main>
+  <footer class="footer"></footer>
 </body>
+
 </html>
