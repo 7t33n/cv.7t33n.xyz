@@ -44,9 +44,9 @@ twitter:
 
 ## Контактная информация
 
+**Локация:** Сербия, Воеводина, Нови-Сад  
 **Email:** [dkulikov17@pm.me](mailto:dkulikov17@pm.me)  
 **Telegram:** [@sevent33n](https://t.me/sevent33n)  
-**Локация:** Сербия, Воеводина, Нови-Сад  
 **LinkedIn:** [linkedin.com/in/7t33n](https://linkedin.com/in/7t33n)  
 **GitHub:** [github.com/7t33n](https://github.com/7t33n)  
 **Blog:** [7t33n.xyz](https://7t33n.xyz)
@@ -68,7 +68,7 @@ Senior Front-end Developer с более чем 6-летним опытом со
 **Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite,  
 **Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silver-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
 **Back-end:** Node.js, Express.js, REST APIs, GraphQL  
-**DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP 
+**DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
 **Testing:** Unit, Integration, and E2E Testing  
 **Project Management:** Agile, Scrum, Kanban, Jira, Confluence  
 **Other:** Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing
