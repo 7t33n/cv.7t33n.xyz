@@ -151,10 +151,10 @@ _Nov 2014 – Jun 2018_
 
 ## Projects
 
-**[cv.7t33.xyz](https://cv.7t33.xyz) (2025):**  
+**[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
 Created a resume platform with TypeScript and markdown-it, deployed on Cloudflare Pages.
 
-**[7t33.xyz](https://7t33.xyz) (2025):**  
+**[7t33n.xyz](https://7t33n.xyz) (2025):**  
 Launched a technical blog and public knowledge base, sharing web dev tips and LeetCode solutions.
 
 ---
