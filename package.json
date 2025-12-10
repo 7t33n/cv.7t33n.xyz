@@ -2,7 +2,7 @@
   "name": "cv.7t33n.xyz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/build.ts",
   "scripts": {
     "build": "bun run build/build.ts",
     "build:watch": "bun --watch run build/build.ts"
@@ -27,6 +27,5 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.2.1",
     "typescript": "^5.9.2"
-  },
-  "private": true
+  }
 }
