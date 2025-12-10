@@ -7,7 +7,7 @@
   <title>{{title}}</title>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/print.css" media="print": />
+  <link rel="stylesheet" href="css/print.css" media="print" />
 
   <meta property="og:title" content="{{og.title}}" />
   <meta property="og:description" content="{{og.description}}" />
@@ -64,6 +64,9 @@
           <a class="header__link" href="https://github.com/7t33n/cv.7t33n.xyz" aria-label="GitHub repository">
             <img class="header__link-icon header__link-icon--github" src="./assets/github.svg" alt="GitHub" />
           </a>
+          <a id="snow-toggle-link" class="header__link" href="javascript:void(0)">
+            <img id="snow-icon" class="header__link-icon header__link-icon--snow header__link-icon--active" src="./assets/snow.svg" alt="Toggle Snow">
+          </a>
         </div>
       </div>
 
@@ -75,6 +78,52 @@
     </article>
   </main>
   <footer class="footer"></footer>
+  <script src="https://cdn.jsdelivr.net/gh/Andrey-1988-dev/snowfall-js/snowfall.js"></script>
+  <script>
+      const LOCAL_STORAGE_KEY = 'isSnowing';
+      
+      const snowIcon = document.getElementById('snow-icon');
+      const snowToggleLink = document.getElementById('snow-toggle-link');
+
+      let isSnowing = localStorage.getItem(LOCAL_STORAGE_KEY) === 'false' ? false : true;
+
+      let snowfallInstance = null;
+
+      function toggleSnow() {
+          if (isSnowing) {
+              isSnowing = false;
+              localStorage.setItem(LOCAL_STORAGE_KEY, 'false'); 
+              
+              if (snowfallInstance) {
+                  snowfallInstance.destroy();
+                  snowfallInstance = null;
+              }
+
+              snowIcon.classList.remove('header__link-icon--active');
+              return;
+          }
+          isSnowing = true;
+          localStorage.setItem(LOCAL_STORAGE_KEY, 'true'); 
+          
+          snowfallInstance = new Snowfall();
+          snowIcon.classList.add('header__link-icon--active');
+      }
+      
+      function initializeSnow() {
+          if (isSnowing) {
+              snowfallInstance = new Snowfall();
+              snowIcon.classList.add('header__link-icon--active');
+              return;
+          }
+
+          snowIcon.classList.remove('header__link-icon--active');
+      }
+
+      initializeSnow();
+
+      snowToggleLink.addEventListener('click', toggleSnow);
+
+  </script>
 </body>
 
 </html>

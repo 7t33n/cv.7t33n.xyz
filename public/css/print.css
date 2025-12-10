@@ -23,7 +23,8 @@
   .header__links,
   .header__lang,
   .footer,
-  script {
+  script,
+  canvas {
     display: none !important;
   }
 

@@ -116,6 +116,10 @@ main {
   opacity: 1;
 }
 
+.header__link-icon--active {
+  filter: invert(1) opacity(1) !important;
+}
+
 .markdown-body {
   color: var(--ocean-text);
 }
