@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsx build/build.ts",
-    "build:watch": "nodemon --watch content --watch public --watch build --ext ts,md,html,css --exec 'tsx build/build.ts'",
-    "serve": "http-server dist -p 8080 -c-1",
-    "dev": "concurrently -n build,serve -c auto 'npm:build:watch' 'npm:serve'"
+    "build": "bun run build/build.ts",
+    "build:watch": "bun --watch run build/build.ts"
   },
   "type": "module",
   "keywords": [
@@ -20,7 +18,7 @@
   ],
   "author": "Dmitry Kulikov",
   "license": "ISC",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "bun@1.3.4",
   "dependencies": {
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0"
@@ -28,11 +26,7 @@
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.2.1",
-    "concurrently": "^9.2.0",
-    "http-server": "^14.1.1",
-    "nodemon": "^3.1.10",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.20.4",
     "typescript": "^5.9.2"
-  }
+  },
+  "private": true
 }
