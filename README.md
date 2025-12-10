@@ -42,7 +42,9 @@ bun install
 
 Why would you do this? I honestly don't know, but if you've spotted a typo in my last name, or noticed I'm slightly exaggerating my skills, please feel free to open a Pull Request or make a Fork.
 
-This project is licensed under the **ISC License**.
+This project is licensed under the [**MIT License**](https://opensource.org/license/MIT).
+
+Copyright (c) 2025-present, Dmitry Kulikov
 
 **Author:**
 * Dmitry Kulikov
