@@ -17,7 +17,7 @@
     "seventeen"
   ],
   "author": "Dmitry Kulikov",
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "bun@1.3.4",
   "dependencies": {
     "js-yaml": "^4.1.0",
