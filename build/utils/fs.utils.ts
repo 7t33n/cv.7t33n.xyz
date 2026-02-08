@@ -1,6 +1,7 @@
 import { Dirent } from "fs";
 import fs from "fs/promises";
 import path from "path";
+import { cssProcessor } from "./postcssRuntime";
 import { BuildConfig } from "../types";
 
 function isSystemError(
@@ -109,26 +110,45 @@ export async function findFiles(
   return allFiles;
 }
 
-export async function copyPublicAssets(config: BuildConfig): Promise<void> {
-  console.log("Copying public assets...");
-  const publicEntries = await fs.readdir(config.publicDir, {
-    withFileTypes: true,
-  });
+async function processFile(src: string, dest: string) {
+  await fs.mkdir(path.dirname(dest), { recursive: true });
+
+  if (src.endsWith(".css")) {
+    const css = await fs.readFile(src, "utf-8");
+    const result = await cssProcessor.process(css, { from: src, to: dest });
+    await fs.writeFile(dest, result.css);
+    if (result.map) await fs.writeFile(`${dest}.map`, result.map.toString());
+    console.log(`Compiled CSS: ${path.relative(process.cwd(), src)}`);
+  } else {
+    await fs.copyFile(src, dest);
+    console.log(`Copied: ${path.relative(process.cwd(), src)}`);
+  }
+}
+
+async function walkAndProcess(
+  srcDir: string,
+  destDir: string,
+  templateFile?: string,
+) {
+  const entries = await fs.readdir(srcDir, { withFileTypes: true });
 
   await Promise.all(
-    publicEntries.map(async (entry) => {
-      if (entry.name === config.templateFile) return;
+    entries.map(async (entry) => {
+      if (entry.name === templateFile) return;
 
-      const srcPath = path.join(config.publicDir, entry.name);
-      const destPath = path.join(config.outDir, entry.name);
+      const srcPath = path.join(srcDir, entry.name);
+      const destPath = path.join(destDir, entry.name);
 
       if (entry.isDirectory()) {
-        await copyDirectory(srcPath, destPath);
-        console.log(`Copied directory: ${entry.name}`);
+        await walkAndProcess(srcPath, destPath);
       } else {
-        await fs.copyFile(srcPath, destPath);
-        console.log(`Copied file: ${entry.name}`);
+        await processFile(srcPath, destPath);
       }
     }),
   );
+}
+
+export async function copyPublicAssets(config: BuildConfig): Promise<void> {
+  console.log("Processing assets...");
+  await walkAndProcess(config.publicDir, config.outDir, config.templateFile);
 }

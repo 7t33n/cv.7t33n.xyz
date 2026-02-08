@@ -1,6 +1,8 @@
 import fs from "fs/promises";
+import { Buffer } from "node:buffer";
 import path from "path";
 import MarkdownIt from "markdown-it";
+import { minify } from "@minify-html/node";
 import { BuildConfig } from "./types";
 import { parseFrontMatter } from "./utils/frontMatter.utils";
 import { fileExists, findFiles, copyPublicAssets } from "./utils/fs.utils";
@@ -66,13 +68,13 @@ async function processMarkdownFiles(
 
         const relativePath = path.relative(config.contentDir, filePath);
         const { dir, name } = path.parse(relativePath);
-        const outName = name === "index" ? "index.html" : `${name}.html`;
+        const outName = `${name}.html`;
         const outDir =
           dir === "" ? config.outDir : path.join(config.outDir, dir);
         const outPath = path.join(outDir, outName);
 
         await fs.mkdir(outDir, { recursive: true });
-        await fs.writeFile(outPath, html, "utf8");
+        await fs.writeFile(outPath, minify(Buffer.from(html), {}), "utf8");
         console.log(`Built: ${path.relative(process.cwd(), outPath)}`);
       } catch (error) {
         console.error(`Error processing ${filePath}:`, error);
