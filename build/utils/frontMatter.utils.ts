@@ -12,14 +12,13 @@ export function parseFrontMatter(md: string): FrontMatterResult {
   const body = md.slice(fmMatch[0].length);
 
   try {
-    const frontMatter = loadYaml(fm) as Record<string, any> | null;
+    const frontMatter = loadYaml(fm) as Record<string, unknown> | null;
 
-    if (typeof frontMatter === 'object' && frontMatter !== null) {
+    if (typeof frontMatter === "object" && frontMatter !== null) {
       return { body, ...frontMatter };
     }
 
     return { body };
-
   } catch (error) {
     console.error("Error parsing front matter:", error);
     return { body };

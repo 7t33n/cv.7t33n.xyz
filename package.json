@@ -5,7 +5,9 @@
   "main": "build/build.ts",
   "scripts": {
     "build": "bun run build/build.ts",
-    "build:watch": "bun --watch run build/build.ts"
+    "build:watch": "bun --watch run build/build.ts",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint . --fix"
   },
   "type": "module",
   "keywords": [
@@ -24,8 +26,15 @@
     "markdown-it": "^14.1.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/js-yaml": "^4.0.9",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.2.1",
-    "typescript": "^5.9.2"
+    "eslint": "^10.0.0",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-markdown": "^5.1.0",
+    "globals": "^17.3.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.54.0"
   }
 }

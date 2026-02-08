@@ -172,4 +172,3 @@ _Tomsk, Russia | Sep 2015 – Jun 2019_
 - **Russian:** Native
 - **English:** intermediate
 - **Serbian:** Beginner
-    

@@ -10,59 +10,75 @@ async function validateConfig(config: BuildConfig): Promise<void> {
   const errors: string[] = [];
 
   const checks = [
-    { path: config.contentDir, message: `Content directory not found: ${config.contentDir}` },
-    { path: config.publicDir, message: `Public directory not found: ${config.publicDir}` },
-    { path: path.join(config.publicDir, config.templateFile), message: `Template file not found: ${path.join(config.publicDir, config.templateFile)}` }
+    {
+      path: config.contentDir,
+      message: `Content directory not found: ${config.contentDir}`,
+    },
+    {
+      path: config.publicDir,
+      message: `Public directory not found: ${config.publicDir}`,
+    },
+    {
+      path: path.join(config.publicDir, config.templateFile),
+      message: `Template file not found: ${path.join(config.publicDir, config.templateFile)}`,
+    },
   ];
 
-  const results = await Promise.all(checks.map(async (check) => {
-    const exists = await fileExists(check.path);
-    return { exists, message: check.message };
-  }));
+  const results = await Promise.all(
+    checks.map(async (check) => {
+      const exists = await fileExists(check.path);
+      return { exists, message: check.message };
+    }),
+  );
 
-  results.forEach(result => {
+  results.forEach((result) => {
     if (!result.exists) {
       errors.push(result.message);
     }
   });
 
   if (errors.length > 0) {
-    throw new Error(`Configuration validation failed: \n${errors.join('\n')}`);
+    throw new Error(`Configuration validation failed: \n${errors.join("\n")}`);
   }
 }
 
-
-
-async function processMarkdownFiles(config: BuildConfig, mdFiles: string[], md: MarkdownIt): Promise<void> {
+async function processMarkdownFiles(
+  config: BuildConfig,
+  mdFiles: string[],
+  md: MarkdownIt,
+): Promise<void> {
   console.log("Processing markdown files...");
   const templatePath = path.join(config.publicDir, config.templateFile);
 
-  await Promise.all(mdFiles.map(async (filePath) => {
-    try {
-      const mdRaw = await fs.readFile(filePath, "utf8");
-      const { body, ...params } = parseFrontMatter(mdRaw);
-      const contentHtml = md.render(body);
+  await Promise.all(
+    mdFiles.map(async (filePath) => {
+      try {
+        const mdRaw = await fs.readFile(filePath, "utf8");
+        const { body, ...params } = parseFrontMatter(mdRaw);
+        const contentHtml = md.render(body);
 
-      const templateVars = {
-        content: contentHtml,
-        ...params
-      };
+        const templateVars = {
+          content: contentHtml,
+          ...params,
+        };
 
-      const html = await loadTemplate(templatePath, templateVars);
+        const html = await loadTemplate(templatePath, templateVars);
 
-      const relativePath = path.relative(config.contentDir, filePath);
-      const { dir, name } = path.parse(relativePath);
-      const outName = name === "index" ? "index.html" : `${name}.html`;
-      const outDir = dir === "" ? config.outDir : path.join(config.outDir, dir);
-      const outPath = path.join(outDir, outName);
+        const relativePath = path.relative(config.contentDir, filePath);
+        const { dir, name } = path.parse(relativePath);
+        const outName = name === "index" ? "index.html" : `${name}.html`;
+        const outDir =
+          dir === "" ? config.outDir : path.join(config.outDir, dir);
+        const outPath = path.join(outDir, outName);
 
-      await fs.mkdir(outDir, { recursive: true });
-      await fs.writeFile(outPath, html, "utf8");
-      console.log(`Built: ${path.relative(process.cwd(), outPath)}`);
-    } catch (error) {
-      console.error(`Error processing ${filePath}:`, error);
-    }
-  }));
+        await fs.mkdir(outDir, { recursive: true });
+        await fs.writeFile(outPath, html, "utf8");
+        console.log(`Built: ${path.relative(process.cwd(), outPath)}`);
+      } catch (error) {
+        console.error(`Error processing ${filePath}:`, error);
+      }
+    }),
+  );
 }
 
 async function build() {
