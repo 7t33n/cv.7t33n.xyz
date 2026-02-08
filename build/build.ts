@@ -56,7 +56,7 @@ async function processMarkdownFiles(
     mdFiles.map(async (filePath) => {
       try {
         const mdRaw = await fs.readFile(filePath, "utf8");
-        const { body, ...params } = parseFrontMatter(mdRaw);
+        const { body, ...params } = await parseFrontMatter(mdRaw);
         const contentHtml = md.render(body);
 
         const templateVars = {
