@@ -17,9 +17,9 @@ export async function parseFrontMatter(md: string): Promise<FrontMatterResult> {
     if (typeof frontMatter === "object" && frontMatter !== null) {
       return { body, ...frontMatter };
     }
+    return { body };
   } catch (error) {
     console.error("Error parsing front matter:", error);
-  } finally {
     return { body };
   }
 }
