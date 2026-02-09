@@ -66,7 +66,7 @@ Senior Front-end Developer с более чем 6-летним опытом со
 ## Навыки
 
 **Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite,  
-**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silver-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
+**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silero VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
 **Back-end:** Node.js, Express.js, REST APIs, GraphQL  
 **DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
 **Testing:** Unit, Integration, and E2E Testing  
@@ -86,7 +86,7 @@ _март 2024 – настоящее время_
 - Разработал новый процесс работы с Git и релизами, что снизило количество ошибок при деплое и повысило качество кода.
 - Плотно взаимодействовал с бэкендом, QA, дизайнерами и техрайтерами для своевременного выпуска фич.
 - Вёл фичи от идеи до релиза, помогая команде выпускать быстрее и без блокеров.
-- Спроектировал и внедрил систему распознавания речи после того, как браузерные API не справились: использовал Gemini для транскрипции и интегрировал VAD в браузере с помощью ONNX Runtime Web и Silver-VAD.
+- Спроектировал и внедрил систему распознавания речи после того, как браузерные API не справились: использовал Gemini для транскрипции и интегрировал VAD в браузере с помощью ONNX Runtime Web и Silero VAD.
 
 **Front-end Developer**  
 _декабрь 2022 – март 2024_
