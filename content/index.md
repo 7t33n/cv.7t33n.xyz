@@ -66,7 +66,7 @@ Senior Front-end Developer with 6+ years of hands-on experience building product
 ## Skills
 
 **Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite,  
-**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silver-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
+**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silero VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
 **Back-end:** Node.js, Express.js, REST APIs, GraphQL  
 **DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
 **Testing:** Unit, Integration, and E2E Testing  
@@ -86,7 +86,7 @@ _Mar 2024 – Present_
 - Designed a new Git and release process, which cut deployment errors and raised code quality.
 - Worked closely with back-end, QA, design, and tech writing teams to deliver features on time.
 - Managed features from idea to launch, helping the team ship faster and with fewer blockers.
-- Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silver-VAD. 
+- Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero VAD. 
 
 **Front-end Developer**  
 _Dec 2022 – Mar 2024_
