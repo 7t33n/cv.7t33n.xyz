@@ -28,9 +28,11 @@ bun install
 ### 2. Available Scripts
 
 | Command | Description |
-| :--- | :--- |
+| :------ | :---------- |
 | `bun run build` | Generates the static output into the `dist/` directory. |
 | `bun run build:watch` | Runs the build process in watch mode. |
+| `bun run eslint` | Checks code for errors and style issues. |
+| `bun run eslint:fix` | Automatically fixes linting errors. |
 
 ## 🤝 Contribution and License
 
