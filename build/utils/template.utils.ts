@@ -22,10 +22,18 @@ function flattenObject(
 }
 
 export async function loadTemplate(
-  templatePath: string,
+  templatePathOrContent: string,
   variables: Record<string, unknown>,
+  isContent = false,
 ): Promise<string> {
-  let template = await fs.readFile(templatePath, "utf8");
+  let template: string;
+
+  if (isContent) {
+    template = templatePathOrContent;
+  } else {
+    template = await fs.readFile(templatePathOrContent, "utf8");
+  }
+
   const flattenedVariables = flattenObject(variables);
 
   for (const [key, value] of Object.entries(flattenedVariables)) {

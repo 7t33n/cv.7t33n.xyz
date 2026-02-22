@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>{{title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/print.css" media="print" />
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}" />
 
         <meta property="og:title" content="{{og.title}}" />
         <meta property="og:description" content="{{og.description}}" />
@@ -52,47 +53,59 @@
 
         <meta name="theme-color" content="#2563eb" />
         <meta name="msapplication-TileColor" content="#2563eb" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-            rel="stylesheet"
-        />
     </head>
 
     <body>
-        <header class="header">
+        <header class="header" role="banner">
             <div class="header__container">
                 <div class="header__logo">
-                    <a href="/">cv.7t33n.xyz</a>
+                    <a href="/">
+                        <img src="./assets/logo.svg" alt="{{title}}" />
+                    </a>
                 </div>
 
                 <div class="header__right">
                     <nav class="header__lang" aria-label="Language selector">
-                        <a class="header__lang-item" href="/index.html">EN</a>
-                        <a class="header__lang-item" href="/ru.html">RU</a>
+                        <a
+                            class="header__lang-item"
+                            href="/index.html"
+                            aria-label="English Version"
+                        >
+                            EN
+                        </a>
+                        <a
+                            class="header__lang-item"
+                            href="/ru.html"
+                            aria-label="Russian Version"
+                        >
+                            RU
+                        </a>
                     </nav>
 
                     <div class="header__links">
                         <a
                             class="header__link"
                             href="https://github.com/7t33n/cv.7t33n.xyz"
-                            aria-label="GitHub repository"
+                            aria-label="GitHub repository (opens in new tab)"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <img
                                 class="header__link-icon header__link-icon--github"
                                 src="./assets/github.svg"
-                                alt="GitHub"
+                                alt=""
+                                aria-hidden="true"
                             />
                         </a>
                     </div>
                 </div>
             </div>
         </header>
-        <main>
+
+        <main id="main-content" tabindex="-1">
             <article class="markdown-body">{{content}}</article>
         </main>
-        <footer class="footer"></footer>
+
+        <footer class="footer" role="contentinfo"></footer>
     </body>
 </html>
