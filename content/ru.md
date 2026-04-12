@@ -7,46 +7,46 @@ github: "https://github.com/7t33n"
 website: "https://cv.7t33n.xyz"
 image: "https://cv.7t33n.xyz/assets/profile.jpg"
 tags:
-  - Front-end Developer
-  - Vue.js
-  - TypeScript
-  - JavaScript
-  - DevOps
-  - Voice Recognition
-  - SaaS
-  - Fintech
-  - E-commerce
-  - Web Development
-  - Agile
-  - CI/CD
-  - Team Lead
-  - Резюме
-  - Портфолио
-  - Нови-Сад
-  - Сербия
-  - Удаленная работа
+  - Front-end Developer
+  - Vue.js
+  - TypeScript
+  - JavaScript
+  - DevOps
+  - Voice Recognition
+  - SaaS
+  - Fintech
+  - E-commerce
+  - Web Development
+  - Agile
+  - CI/CD
+  - Team Lead
+  - Резюме
+  - Портфолио
+  - Нови-Сад
+  - Сербия
+  - Удаленная работа
 keywords: "Дмитрий Куликов, Front-end Developer, Vue.js, TypeScript, JavaScript, DevOps, SaaS, Fintech, E-commerce, Резюме, Портфолио, Нови-Сад, Сербия, Удаленный разработчик, Agile, CI/CD, Team Lead"
 summary: "Senior Front-end Developer с опытом 6+ лет в создании масштабируемых веб-приложений для финтех, SaaS и электронной коммерции. Опыт в Vue.js, TypeScript, DevOps и управлении командой. Город: Нови-Сад, Сербия."
 og:
-  title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, опытного Front-end разработчика, специализирующегося на Vue.js, TypeScript и масштабируемых веб-решениях."
-  locale: "ru"
-  image: "https://cv.7t33n.xyz/assets/profile.jpg"
-  url: "https://cv.7t33n.xyz"
+	title: "Дмитрий Куликов – Senior Front-end Developer"
+  description: "Резюме и портфолио Дмитрия Куликова, опытного Front-end разработчика, специализирующегося на Vue.js, TypeScript и масштабируемых веб-решениях."
+  locale: "ru"
+  image: "https://cv.7t33n.xyz/assets/profile.jpg" 
+  url: "https://cv.7t33n.xyz"
 twitter:
-  card: "summary_large_image"
-  site: "@sevent33n"
-  title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, Senior Front-end Developer с опытом в Vue.js, TypeScript и DevOps."
-  image: "https://cv.7t33n.xyz/assets/profile.jpg"
+  card: "summary_large_image"
+  site: "@sevent33n"
+  title: "Дмитрий Куликов – Senior Front-end Developer"
+  description: "Резюме и портфолио Дмитрия Куликова, Senior Front-end Developer с опытом в Vue.js, TypeScript и DevOps."
+  image: "https://cv.7t33n.xyz/assets/profile.jpg"
 ---
 # Дмитрий Куликов
 
 ## Контактная информация
 
-**Локация:** Сербия, Воеводина, Нови-Сад  
+**Локация:** Сербия, Воеводина, Нови-Сад   
 **Email:** [dkulikov17@pm.me](mailto:dkulikov17@pm.me)  
-**Telegram:** [@sevent33n](https://t.me/sevent33n)  
+**Telegram:** [@sevent33n](https://t.me/sevent33n) 
 **LinkedIn:** [linkedin.com/in/7t33n](https://linkedin.com/in/7t33n)  
 **GitHub:** [github.com/7t33n](https://github.com/7t33n)  
 **Blog:** [7t33n.xyz](https://7t33n.xyz)
@@ -65,13 +65,22 @@ Senior Front-end Developer с более чем 6-летним опытом со
 
 ## Навыки
 
-**Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite,  
-**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silero VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
-**Back-end:** Node.js, Express.js, REST APIs, GraphQL  
-**DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
-**Testing:** Unit, Integration, and E2E Testing  
-**Project Management:** Agile, Scrum, Kanban, Jira, Confluence  
-**Other:** Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing
+**Front-end**: JavaScript (ES6+), TypeScript (8 лет), Vue.js (10 лет), Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
+**Architecture & DevOps**: Monorepo (Turborepo, NX), Docker, Podman, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
+**Voice & Speech**: Voice Activity Detection (VAD), ONNX Runtime Web, Silero-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
+**Back-end**: Node.js, Express.js, REST APIs, GraphQL  
+**LLM Development**: Cursor, OpenCode, prompt engineering для генерации кода  
+**Testing**: Unit, Integration, and E2E Testing  
+**Project Management**: Agile, Scrum, Kanban, Jira, Confluence  
+**Other**: Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing  
+
+---
+
+## Лидерство и Архитектура
+
+**Техническое лидерство**: Управление командой (10+ инженеров), Менторинг, Best Practices Code Review, Проектирование технической архитектуры  
+**Управление процессами**: Управление релизами, Планирование спринтов, Разработка технического роадмапа  
+**Архитектура**: Монорепозиторий, Стратегия изоляции фич, Проектирование масштабируемых приложений  
 
 ---
 
@@ -79,14 +88,25 @@ Senior Front-end Developer с более чем 6-летним опытом со
 
 ### SXOPE | Tampa, FL, USA _(удалённо)_
 
+**Technical Lead**  
+_апрель 2025 – настоящее время_
+
+- Спроектировал переход на монорепозиторий для изоляции фич как пакетов, устранив интеграционные баги от тесной связанности легаси-кода.
+- Внедрил процесс релизов с нулевым процентом откатов благодаря препрод-окружению и 2-дневному окну тестирования перед продом.
+- Руководил командой из 10 инженеров; ускорил доставку фичей на 50% за счёт архитектурных изменений и оптимизации процессов.
+- Интегрировал LLM-инструменты в рабочий процесс разработки, оптимизируя использование контекста для изолированных фича-пакетов вместо полного проекта.
+- Принял ответственность за процессы релизов и архитектуру проекта (Electron, Webapp, Chrome Extension).
+
+> "Я верю, что хорошая архитектура — это не про технологии, а про людей и процессы. Мой фокус: изоляция сложности, прозрачность релизов и опыт разработки."
+
 **Lead Front-end Developer**  
-_март 2024 – настоящее время_
+_март 2024 – март 2025_
 
 - Руководил командой из 9 инженеров: ставил понятные цели, увеличил скорость спринтов и стабильность релизов.
 - Разработал новый процесс работы с Git и релизами, что снизило количество ошибок при деплое и повысило качество кода.
 - Плотно взаимодействовал с бэкендом, QA, дизайнерами и техрайтерами для своевременного выпуска фич.
 - Вёл фичи от идеи до релиза, помогая команде выпускать быстрее и без блокеров.
-- Спроектировал и внедрил систему распознавания речи после того, как браузерные API не справились: использовал Gemini для транскрипции и интегрировал VAD в браузере с помощью ONNX Runtime Web и Silero VAD.
+- Спроектировал и внедрил систему распознавания речи после того, как браузерные API не справились: использовал Gemini для транскрипции и интегрировал VAD в браузере с помощью ONNX Runtime Web и Silero-VAD.
 
 **Front-end Developer**  
 _декабрь 2022 – март 2024_

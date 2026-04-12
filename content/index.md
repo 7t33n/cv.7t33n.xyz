@@ -65,13 +65,22 @@ Senior Front-end Developer with 6+ years of hands-on experience building product
 
 ## Skills
 
-**Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite,  
-**Voice & Speech:** Voice Activity Detection (VAD), ONNX Runtime Web, Silero VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
-**Back-end:** Node.js, Express.js, REST APIs, GraphQL  
-**DevOps & Cloud:** Docker, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
-**Testing:** Unit, Integration, and E2E Testing  
-**Project Management:** Agile, Scrum, Kanban, Jira, Confluence  
-**Other:** Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing
+**Front-end**: JavaScript (ES6+), TypeScript (8 years), Vue.js (10 years), Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
+**Architecture & DevOps**: Monorepo (Turborepo, NX), Docker, Podman, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
+**Voice & Speech**: Voice Activity Detection (VAD), ONNX Runtime Web, Silero-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
+**Back-end**: Node.js, Express.js, REST APIs, GraphQL  
+**LLM Development**: Cursor, OpenCode, prompt engineering for code generation  
+**Testing**: Unit, Integration, and E2E Testing  
+**Project Management**: Agile, Scrum, Kanban, Jira, Confluence  
+**Other**: Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing  
+
+---
+
+## Leadership & Architecture
+
+**Technical Leadership**: Team Management (10+ engineers), Mentoring, Code Review Best Practices, Technical Architecture Design  
+**Process Management**: Release Process Management, Sprint Planning, Technical Roadmap Development  
+**Architecture**: Monorepo Architecture, Feature Isolation Strategy, Scalable Application Design  
 
 ---
 
@@ -79,14 +88,25 @@ Senior Front-end Developer with 6+ years of hands-on experience building product
 
 ### SXOPE | Tampa, FL, USA _(Remote)_
 
+**Technical Lead**  
+_Apr 2025 – Present_
+
+- Architected monorepo transition to isolate features as packages, eliminating integration bugs from legacy code tight coupling.
+- Established release process with zero rollbacks by introducing pre-production environments and 2-day testing windows before production deployment.
+- Led team of 10 engineers; improved feature delivery speed by 50% through architectural changes and process optimization.
+- Integrated LLM tools into development workflow, optimizing context usage for isolated feature packages vs. full project context.
+- Took ownership of release processes and project architecture across Webapp, and Browser Extension stacks.
+
+> "I believe that good architecture is not about technologies, but about people and processes. My focus: isolating complexity, release transparency, and development experience."
+
 **Lead Front-end Developer**  
-_Mar 2024 – Present_
+_Mar 2024 – Mar 2025_
 
 - Led a team of 9 engineers, set clear goals, and improved sprint velocity and release reliability.
 - Designed a new Git and release process, which cut deployment errors and raised code quality.
 - Worked closely with back-end, QA, design, and tech writing teams to deliver features on time.
 - Managed features from idea to launch, helping the team ship faster and with fewer blockers.
-- Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero VAD. 
+- Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero-VAD. 
 
 **Front-end Developer**  
 _Dec 2022 – Mar 2024_
@@ -151,10 +171,10 @@ _Nov 2014 – Jun 2018_
 
 ## Projects
 
-**[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
+**[cv.7t33.xyz](https://cv.7t33.xyz) (2025):**  
 Created a resume platform with TypeScript and markdown-it, deployed on Cloudflare Pages.
 
-**[7t33n.xyz](https://7t33n.xyz) (2025):**  
+**[7t33.xyz](https://7t33.xyz) (2025):**  
 Launched a technical blog and public knowledge base, sharing web dev tips and LeetCode solutions.
 
 ---
