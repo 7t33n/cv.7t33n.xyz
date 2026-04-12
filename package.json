@@ -6,6 +6,7 @@
   "scripts": {
     "build": "bun run build/build.ts",
     "build:watch": "bun --watch run build/build.ts",
+    "serve:dist": "bun serve dist -p 3000",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix"
   },
@@ -37,6 +38,7 @@
     "eslint-plugin-markdown": "^5.1.0",
     "globals": "^17.3.0",
     "postcss": "^8.5.6",
+    "serve": "^14.2.6",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.54.0"
   }
