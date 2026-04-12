@@ -36,6 +36,7 @@ export function parseCSS(css: string): CSSResource[] {
 export function updateCSSPaths(
   css: string,
   fromDir: string,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   toDir: string,
 ): string {
   return css.replace(/url\(["']?([^"')]+)["']?\)/gi, (match, path) => {

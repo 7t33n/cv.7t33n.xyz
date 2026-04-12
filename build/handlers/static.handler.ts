@@ -31,7 +31,6 @@ export class StaticHandler extends BaseHandler {
   async process(
     sourcePath: string,
     config: BuildConfig,
-    _metadata?: Record<string, string>,
   ): Promise<ProcessResult> {
     const outputPath = path.join(config.outDir, sourcePath);
 

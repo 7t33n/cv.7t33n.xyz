@@ -6,7 +6,7 @@ import {
   normalizePath,
 } from "../parsers/html.parser";
 import { DependencyGraph } from "./dependency-graph";
-import { CSSHandler, StaticHandler } from "../handlers";
+import { CSSHandler, StaticHandler, SVGHandler } from "../handlers";
 
 export async function processAssets(
   templatePath: string,
@@ -16,7 +16,7 @@ export async function processAssets(
 
   const resources = parseHTML(templateContent);
 
-  const handlers = [new CSSHandler(), new StaticHandler()];
+  const handlers = [new CSSHandler(), new SVGHandler(), new StaticHandler()];
   const graph = new DependencyGraph(handlers);
 
   for (const resource of resources) {
@@ -48,6 +48,19 @@ export async function processAssets(
       if (result?.content) {
         const styleTag = `<style>\n${result.content}\n  </style>`;
         updatedHTML = updatedHTML.replace(resource.tag, styleTag);
+      }
+    }
+
+    if (resource.type === "image" && resource.href.endsWith(".svg") && !isExternalPath(resource.href)) {
+      const resourcePath = normalizePath(resource.href);
+      const result = graph.getResult(resourcePath);
+
+      if (result?.content) {
+        const encoded = encodeURIComponent(result.content);
+        updatedHTML = updatedHTML.replace(
+          `src="${resource.href}"`,
+          `src="data:image/svg+xml;utf8,${encoded}"`,
+        );
       }
     }
   }
