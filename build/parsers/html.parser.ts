@@ -89,6 +89,10 @@ export function isExternalPath(path: string): boolean {
   return /^https?:\/\//i.test(path);
 }
 
+export function isTemplateVariable(path: string): boolean {
+  return /^\{\{.*\}\}$/.test(path);
+}
+
 export function normalizePath(path: string): string {
   return path.startsWith("/") ? path.slice(1) : path;
 }

@@ -1,13 +1,14 @@
 import fs from "fs/promises";
 import { Buffer } from "node:buffer";
 import path from "path";
-import MarkdownIt from "markdown-it";
+import type MarkdownIt from "markdown-it";
 import { minify } from "@minify-html/node";
 import { BuildConfig } from "./types";
 import { parseFrontMatter } from "./utils/frontMatter.utils";
 import { fileExists, findFiles } from "./utils/fs.utils";
 import { loadTemplate } from "./utils/template.utils";
 import { processAssets } from "./core/asset-processor";
+import { createMarkdownIt } from "./utils/markdown";
 
 async function validateConfig(config: BuildConfig): Promise<void> {
   const errors: string[] = [];
@@ -122,11 +123,7 @@ async function build() {
     await fs.rm(config.outDir, { recursive: true, force: true });
     await fs.mkdir(config.outDir, { recursive: true });
 
-    const md = new MarkdownIt({
-      html: false,
-      linkify: true,
-      typographer: true,
-    });
+    const md = createMarkdownIt();
 
     console.log("Finding markdown files...");
     const mdFiles = await findFiles(config.contentDir, ".md");

@@ -7,38 +7,38 @@ github: "https://github.com/7t33n"
 website: "https://cv.7t33n.xyz"
 image: "https://cv.7t33n.xyz/assets/profile.jpg"
 tags:
-  - Front-end Developer
-  - Vue.js
-  - TypeScript
-  - JavaScript
-  - DevOps
-  - Voice Recognition
-  - SaaS
-  - Fintech
-  - E-commerce
-  - Web Development
-  - Agile
-  - CI/CD
-  - Team Lead
-  - Резюме
-  - Портфолио
-  - Нови-Сад
-  - Сербия
-  - Удаленная работа
+   - Front-end Developer
+   - Vue.js
+   - TypeScript
+   - JavaScript
+   - DevOps
+   - Voice Recognition
+   - SaaS
+   - Fintech
+   - E-commerce
+   - Web Development
+   - Agile
+   - CI/CD
+   - Team Lead
+   - Резюме
+   - Портфолио
+   - Нови-Сад
+   - Сербия
+   - Удаленная работа
 keywords: "Дмитрий Куликов, Front-end Developer, Vue.js, TypeScript, JavaScript, DevOps, SaaS, Fintech, E-commerce, Резюме, Портфолио, Нови-Сад, Сербия, Удаленный разработчик, Agile, CI/CD, Team Lead"
 summary: "Senior Front-end Developer с опытом 6+ лет в создании масштабируемых веб-приложений для финтех, SaaS и электронной коммерции. Опыт в Vue.js, TypeScript, DevOps и управлении командой. Город: Нови-Сад, Сербия."
 og:
-	title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, опытного Front-end разработчика, специализирующегося на Vue.js, TypeScript и масштабируемых веб-решениях."
-  locale: "ru"
-  image: "https://cv.7t33n.xyz/assets/profile.jpg" 
-  url: "https://cv.7t33n.xyz"
+  title: "Дмитрий Куликов – Senior Front-end Developer"
+  description: "Резюме и портфолио Дмитрия Куликова, опытного Front-end разработчика, специализирующегося на Vue.js, TypeScript и масштабируемых веб-решениях."
+  locale: "ru"
+  image: "https://cv.7t33n.xyz/assets/profile.jpg"
+  url: "https://cv.7t33n.xyz"
 twitter:
-  card: "summary_large_image"
-  site: "@sevent33n"
-  title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, Senior Front-end Developer с опытом в Vue.js, TypeScript и DevOps."
-  image: "https://cv.7t33n.xyz/assets/profile.jpg"
+  card: "summary_large_image"
+  site: "@sevent33n"
+  title: "Дмитрий Куликов – Senior Front-end Developer"
+  description: "Резюме и портфолио Дмитрия Куликова, Senior Front-end Developer с опытом в Vue.js, TypeScript и DevOps."
+  image: "https://cv.7t33n.xyz/assets/profile.jpg"
 ---
 # Дмитрий Куликов
 

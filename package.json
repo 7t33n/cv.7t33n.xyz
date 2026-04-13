@@ -25,6 +25,7 @@
   "dependencies": {
     "js-yaml": "^4.1.0",
     "markdown-it": "^14.1.0",
+    "markdown-it-container": "^4.0.0",
     "svgo": "^4.0.1"
   },
   "devDependencies": {

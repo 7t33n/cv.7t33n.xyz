@@ -3,6 +3,7 @@ import { BuildConfig, ProcessedAssets } from "../types";
 import {
   parseHTML,
   isExternalPath,
+  isTemplateVariable,
   normalizePath,
 } from "../parsers/html.parser";
 import { DependencyGraph } from "./dependency-graph";
@@ -20,7 +21,7 @@ export async function processAssets(
   const graph = new DependencyGraph(handlers);
 
   for (const resource of resources) {
-    if (isExternalPath(resource.href)) {
+    if (isExternalPath(resource.href) || isTemplateVariable(resource.href)) {
       continue;
     }
 
@@ -41,7 +42,7 @@ export async function processAssets(
   let updatedHTML = templateContent;
 
   for (const resource of resources) {
-    if (resource.type === "stylesheet" && !isExternalPath(resource.href)) {
+    if (resource.type === "stylesheet" && !isExternalPath(resource.href) && !isTemplateVariable(resource.href)) {
       const resourcePath = normalizePath(resource.href);
       const result = graph.getResult(resourcePath);
 
@@ -51,7 +52,7 @@ export async function processAssets(
       }
     }
 
-    if (resource.type === "image" && resource.href.endsWith(".svg") && !isExternalPath(resource.href)) {
+    if (resource.type === "image" && resource.href.endsWith(".svg") && !isExternalPath(resource.href) && !isTemplateVariable(resource.href)) {
       const resourcePath = normalizePath(resource.href);
       const result = graph.getResult(resourcePath);
 
