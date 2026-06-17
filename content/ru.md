@@ -46,7 +46,7 @@ twitter:
 
 **Локация:** Сербия, Воеводина, Нови-Сад   
 **Email:** [dkulikov17@pm.me](mailto:dkulikov17@pm.me)  
-**Telegram:** [@sevent33n](https://t.me/sevent33n) 
+**Telegram:** [@sevent33n](https://t.me/sevent33n)  
 **LinkedIn:** [linkedin.com/in/7t33n](https://linkedin.com/in/7t33n)  
 **GitHub:** [github.com/7t33n](https://github.com/7t33n)  
 **Blog:** [7t33n.xyz](https://7t33n.xyz)
