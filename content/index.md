@@ -29,7 +29,7 @@ keywords: "Dmitry Kulikov, Front-end Developer, Vue.js, TypeScript, JavaScript, 
 summary: "Lead Front-end Engineer with 6+ years of experience building scalable web applications for fintech, SaaS, and e-commerce. Skilled in Vue.js, TypeScript, DevOps, and team leadership. Based in Novi Sad, Serbia."
 og:
   title: "Dmitry Kulikov – Lead Front-end Engineer"
-  description: "Lead Front-end Engineer with 6+ years in fintech, SaaS, and e-commerce. I craft scalable, high-performance web apps with Vue.js, TypeScript, and DevOps."
+  description: "Lead Front-end Engineer with 6+ years in fintech, SaaS, and e-commerce. I build scalable web apps with Vue.js, TypeScript, and DevOps."
   locale: "en"
   image: "https://cv.7t33n.xyz/assets/profile.jpg" 
   url: "https://cv.7t33n.xyz"
@@ -56,10 +56,10 @@ twitter:
 
 ## Summary
 
-Lead Front-end Engineer with 6+ years of hands-on experience building products for fintech, SaaS, and e-commerce. I lead teams, design scalable web apps, and streamline development processes. My toolkit includes Vue.js, TypeScript, and modern DevOps practices. I care deeply about clean code, efficient workflows, and helping others grow.
-- Introduced Agile routines and automated repetitive release tasks, freeing the team from manual deployment overhead.
-- Cut deployment mistakes after rolling out a new Git workflow and CI/CD pipeline.
-- Built high-traffic features that handle 10,000+ data records with fast, reliable performance.
+Lead Front-end Engineer with 6+ years building products for fintech, SaaS, and e-commerce. I lead teams and design web apps that scale, mostly in Vue.js and TypeScript, and I handle the DevOps side too. Most of my time goes into keeping the codebase clean and making releases boring.
+- Set up Agile routines and automated the repetitive release work, so the team stopped deploying by hand.
+- Rolled out a new Git workflow and CI/CD pipeline, which cut deployment mistakes.
+- Built high-traffic features that stay responsive at 10,000+ records.
 
 ---
 
@@ -96,7 +96,7 @@ _Apr 2025 – Present_
 - Integrated LLM tools into development workflow, optimizing context usage for isolated feature packages vs. full project context.
 - Took ownership of release processes and project architecture across Webapp, and Browser Extension stacks.
 
-> "I believe that good architecture is not about technologies, but about people and processes. My focus: isolating complexity, release transparency, and development experience."
+> "Good architecture has less to do with technology than with people and process. I focus on isolating complexity and keeping releases transparent."
 
 **Lead Front-end Developer**  
 _Mar 2024 – Mar 2025_
@@ -105,7 +105,7 @@ _Mar 2024 – Mar 2025_
 - Designed a new Git branching and release process, replacing the ad-hoc deploys that previously caused recurring production errors.
 - Worked closely with back-end, QA, design, and tech writing teams to deliver features on time.
 - Managed features from idea to launch, helping the team ship faster and with fewer blockers.
-- Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero-VAD. 
+- Built a custom voice recognition system after the browser APIs fell short. It uses Gemini for transcription and runs real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero-VAD.
 
 **Front-end Developer**  
 _Dec 2022 – Mar 2024_
@@ -130,7 +130,7 @@ _Aug 2020 – Apr 2022_
 
 - Grew the front-end team from 2 to 8, hiring and onboarding new developers to support company growth.
 - Mentored junior engineers—three earned promotions under my guidance.
-- Led the build of a fintech analytics platform, giving stakeholders real-time insights for better decisions.
+- Led the build of a fintech analytics platform that gave stakeholders real-time insight into the numbers.
 - Started a mobile development team, expanding the company’s service range.
 
 **Front-end Developer**  
@@ -146,7 +146,7 @@ _Sep 2019 – Aug 2020_
 **Front-end Developer**  
 _May 2019 – Aug 2019_
 
-- Developed a corporate website and used graph theory to create interactive animations, boosting user engagement.
+- Developed a corporate website with interactive animations driven by graph theory.
 
 ---
 
