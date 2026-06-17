@@ -57,7 +57,7 @@ twitter:
 ## Summary
 
 Lead Front-end Engineer with 6+ years of hands-on experience building products for fintech, SaaS, and e-commerce. I lead teams, design scalable web apps, and streamline development processes. My toolkit includes Vue.js, TypeScript, and modern DevOps practices. I care deeply about clean code, efficient workflows, and helping others grow.
-- Boosted team output by introducing Agile routines and automating repetitive tasks.
+- Introduced Agile routines and automated repetitive release tasks, freeing the team from manual deployment overhead.
 - Cut deployment mistakes after rolling out a new Git workflow and CI/CD pipeline.
 - Built high-traffic features that handle 10,000+ data records with fast, reliable performance.
 
@@ -68,7 +68,7 @@ Lead Front-end Engineer with 6+ years of hands-on experience building products f
 **Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
 **Architecture & DevOps**: Monorepo (Turborepo, NX), Docker, Podman, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
 **Back-end**: Node.js, Express.js, REST APIs, GraphQL  
-**LLM Development**: Cursor, OpenCode, prompt engineering for code generation  
+**AI-Assisted Engineering**: Cursor, Claude Code, OpenCode, MCP (Model Context Protocol) servers, prompt engineering for code generation, context optimization for monorepo/feature-isolated codebases, LLM integration in product (Gemini transcription)  
 **Testing**: Unit, Integration, and E2E Testing  
 **Project Management**: Agile, Scrum, Kanban, Jira, Confluence  
 **Other**: Data Visualization, Analytics, Microservices, Refactoring Legacy Code, Technical Writing  
@@ -92,7 +92,7 @@ _Apr 2025 – Present_
 
 - Architected monorepo transition to isolate features as packages, eliminating integration bugs from legacy code tight coupling.
 - Established release process with zero rollbacks by introducing pre-production environments and 2-day testing windows before production deployment.
-- Led team of 10 engineers; improved feature delivery speed by 50% through architectural changes and process optimization.
+- Led team of 10 engineers; reduced feature integration time by isolating packages in a monorepo, removing the cross-feature merge conflicts that previously blocked parallel work.
 - Integrated LLM tools into development workflow, optimizing context usage for isolated feature packages vs. full project context.
 - Took ownership of release processes and project architecture across Webapp, and Browser Extension stacks.
 
@@ -102,7 +102,7 @@ _Apr 2025 – Present_
 _Mar 2024 – Mar 2025_
 
 - Led a team of 9 engineers, set clear goals, and improved sprint velocity and release reliability.
-- Designed a new Git and release process, which cut deployment errors and raised code quality.
+- Designed a new Git branching and release process, replacing the ad-hoc deploys that previously caused recurring production errors.
 - Worked closely with back-end, QA, design, and tech writing teams to deliver features on time.
 - Managed features from idea to launch, helping the team ship faster and with fewer blockers.
 - Designed and launched a custom voice recognition system after browser APIs fell short, leveraging Gemini for transcription and integrating real-time Voice Activity Detection (VAD) in the browser with ONNX Runtime Web and Silero-VAD. 
@@ -110,7 +110,7 @@ _Mar 2024 – Mar 2025_
 **Front-end Developer**  
 _Dec 2022 – Mar 2024_
 
-- Built a Virtual Scroll component that lets users browse 10,000+ table rows smoothly, with collapse function, slashing load times.
+- Built a Virtual Scroll component with collapsible rows that keeps the table interactive at 10,000+ rows, where the previous render froze the UI.
 - Rewrote polygon and point rendering with google maps, improving speed from O(n²) to O(n).
 - Set up automated unit and integration tests, raising code coverage and catching bugs before release.
 
@@ -189,5 +189,5 @@ _Tomsk, Russia | Sep 2015 – Jun 2019_
 ### Languages
 
 - **Russian:** Native
-- **English:** intermediate
+- **English:** Intermediate
 - **Serbian:** Beginner
