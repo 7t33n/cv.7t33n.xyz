@@ -52,8 +52,6 @@ twitter:
 **GitHub:** [github.com/7t33n](https://github.com/7t33n)  
 **Blog:** [7t33n.xyz](https://7t33n.xyz)
 
----
-
 ## Summary
 
 Lead Front-end Engineer with 6+ years building products for fintech, SaaS, and e-commerce. I lead teams and design web apps that scale, mostly in Vue.js and TypeScript, and I handle the DevOps side too. Most of my time goes into keeping the codebase clean and making releases boring.
@@ -75,6 +73,7 @@ Lead Front-end Engineer with 6+ years building products for fintech, SaaS, and e
 
 ---
 
+:::no-print
 ## Leadership & Architecture
 
 **Technical Leadership**: Team Management (10+ engineers), Mentoring, Code Review Best Practices, Technical Architecture Design  
@@ -82,6 +81,7 @@ Lead Front-end Engineer with 6+ years building products for fintech, SaaS, and e
 **Architecture**: Monorepo Architecture, Feature Isolation Strategy, Scalable Application Design  
 
 ---
+:::
 
 ## Work Experience
 
@@ -168,6 +168,7 @@ _Nov 2014 – Jun 2018_
     
 ---
 
+:::no-print
 ## Projects
 
 **[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
@@ -177,6 +178,7 @@ Created a resume platform with TypeScript and markdown-it, deployed on Cloudflar
 Launched a technical blog and public knowledge base, sharing web dev tips and LeetCode solutions.
 
 ---
+:::
 
 ## Education
 

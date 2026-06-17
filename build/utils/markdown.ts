@@ -8,6 +8,12 @@ export function createMarkdownIt(): MarkdownIt {
     typographer: true,
   });
 
+  md.use(container, "no-print", {
+    validate: (params: string) => Boolean(params.trim().match(/^no-print$/)),
+    render: (tokens: MarkdownIt.Token[], idx: number) =>
+      tokens[idx].nesting === 1 ? `<div class="no-print">\n` : `</div>\n`,
+  });
+
   md.use(container, "spoiler", {
     validate: (params: string) => params.trim().match(/^spoiler\s*(.*)$/),
     render: (tokens: MarkdownIt.Token[], idx: number) => {
