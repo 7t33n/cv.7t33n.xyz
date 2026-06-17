@@ -1,6 +1,6 @@
 ---
-title: "Dmitry Kulikov – Senior Front-end Developer | Resume"
-description: "Resume of Dmitry Kulikov, a Senior Front-end Developer with 6+ years of experience in fintech, SaaS, and e-commerce. Expert in Vue.js, TypeScript, DevOps, and scalable web applications. Based in Novi Sad, Serbia."
+title: "Dmitry Kulikov – Lead Front-end Engineer | Resume"
+description: "Lead Front-end Engineer with 6+ years across fintech, SaaS, and e-commerce. I build scalable, high-performance web applications with Vue.js, TypeScript, and DevOps. Based in Novi Sad, Serbia."
 email: "dkulikov17@pm.me"
 linkedin: "https://linkedin.com/in/7t33n"
 github: "https://github.com/7t33n"
@@ -26,18 +26,18 @@ tags:
   - Serbia
   - Remote Work
 keywords: "Dmitry Kulikov, Front-end Developer, Vue.js, TypeScript, JavaScript, DevOps, SaaS, Fintech, E-commerce, Resume, Portfolio, Novi Sad, Serbia, Remote Developer, Agile, CI/CD, Team Lead"
-summary: "Senior Front-end Developer with 6+ years of experience building scalable web applications for fintech, SaaS, and e-commerce. Skilled in Vue.js, TypeScript, DevOps, and team leadership. Based in Novi Sad, Serbia."
+summary: "Lead Front-end Engineer with 6+ years of experience building scalable web applications for fintech, SaaS, and e-commerce. Skilled in Vue.js, TypeScript, DevOps, and team leadership. Based in Novi Sad, Serbia."
 og:
-  title: "Dmitry Kulikov – Senior Front-end Developer"
-  description: "Explore the resume and portfolio of Dmitry Kulikov, an experienced front-end engineer specializing in Vue.js, TypeScript, and scalable web solutions."
+  title: "Dmitry Kulikov – Lead Front-end Engineer"
+  description: "Lead Front-end Engineer with 6+ years in fintech, SaaS, and e-commerce. I craft scalable, high-performance web apps with Vue.js, TypeScript, and DevOps."
   locale: "en"
   image: "https://cv.7t33n.xyz/assets/profile.jpg" 
   url: "https://cv.7t33n.xyz"
 twitter:
   card: "summary_large_image"
   site: "@sevent33n"
-  title: "Dmitry Kulikov – Senior Front-end Developer"
-  description: "Resume and portfolio of Dmitry Kulikov, a Senior Front-end Developer with expertise in Vue.js, TypeScript, and DevOps."
+  title: "Dmitry Kulikov – Lead Front-end Engineer"
+  description: "Lead Front-end Engineer building scalable web apps with Vue.js, TypeScript, and DevOps. 6+ years across fintech, SaaS, and e-commerce."
   image: "https://cv.7t33n.xyz/assets/profile.jpg"
 ---
 
@@ -56,7 +56,7 @@ twitter:
 
 ## Summary
 
-Senior Front-end Developer with 6+ years of hands-on experience building products for fintech, SaaS, and e-commerce. I lead teams, design scalable web apps, and streamline development processes. My toolkit includes Vue.js, TypeScript, and modern DevOps practices. I care deeply about clean code, efficient workflows, and helping others grow.
+Lead Front-end Engineer with 6+ years of hands-on experience building products for fintech, SaaS, and e-commerce. I lead teams, design scalable web apps, and streamline development processes. My toolkit includes Vue.js, TypeScript, and modern DevOps practices. I care deeply about clean code, efficient workflows, and helping others grow.
 - Boosted team output by introducing Agile routines and automating repetitive tasks.
 - Cut deployment mistakes after rolling out a new Git workflow and CI/CD pipeline.
 - Built high-traffic features that handle 10,000+ data records with fast, reliable performance.
@@ -65,9 +65,8 @@ Senior Front-end Developer with 6+ years of hands-on experience building product
 
 ## Skills
 
-**Front-end**: JavaScript (ES6+), TypeScript (8 years), Vue.js (10 years), Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
+**Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
 **Architecture & DevOps**: Monorepo (Turborepo, NX), Docker, Podman, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
-**Voice & Speech**: Voice Activity Detection (VAD), ONNX Runtime Web, Silero-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
 **Back-end**: Node.js, Express.js, REST APIs, GraphQL  
 **LLM Development**: Cursor, OpenCode, prompt engineering for code generation  
 **Testing**: Unit, Integration, and E2E Testing  
@@ -171,10 +170,10 @@ _Nov 2014 – Jun 2018_
 
 ## Projects
 
-**[cv.7t33.xyz](https://cv.7t33.xyz) (2025):**  
+**[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
 Created a resume platform with TypeScript and markdown-it, deployed on Cloudflare Pages.
 
-**[7t33.xyz](https://7t33.xyz) (2025):**  
+**[7t33n.xyz](https://7t33n.xyz) (2025):**  
 Launched a technical blog and public knowledge base, sharing web dev tips and LeetCode solutions.
 
 ---

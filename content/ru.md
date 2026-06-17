@@ -1,6 +1,6 @@
 ---
-title: "Дмитрий Куликов – Senior Front-end Developer | Резюме"
-description: "Резюме Дмитрия Куликова, Senior Front-end Developer с опытом 6+ лет в финтех, SaaS и электронной коммерции. Эксперт по Vue.js, TypeScript, DevOps и масштабируемым веб-приложениям. Город: Нови-Сад, Сербия."
+title: "Дмитрий Куликов – Lead Front-end Engineer | Резюме"
+description: "Lead Front-end Engineer с опытом более 6 лет в финтехе, SaaS и e-commerce. Создаю масштабируемые и производительные веб-приложения на Vue.js, TypeScript и с DevOps-практиками. Нови-Сад, Сербия."
 email: "dkulikov17@pm.me"
 linkedin: "https://linkedin.com/in/7t33n"
 github: "https://github.com/7t33n"
@@ -26,18 +26,18 @@ tags:
    - Сербия
    - Удаленная работа
 keywords: "Дмитрий Куликов, Front-end Developer, Vue.js, TypeScript, JavaScript, DevOps, SaaS, Fintech, E-commerce, Резюме, Портфолио, Нови-Сад, Сербия, Удаленный разработчик, Agile, CI/CD, Team Lead"
-summary: "Senior Front-end Developer с опытом 6+ лет в создании масштабируемых веб-приложений для финтех, SaaS и электронной коммерции. Опыт в Vue.js, TypeScript, DevOps и управлении командой. Город: Нови-Сад, Сербия."
+summary: "Lead Front-end Engineer с опытом 6+ лет в создании масштабируемых веб-приложений для финтех, SaaS и электронной коммерции. Опыт в Vue.js, TypeScript, DevOps и управлении командой. Город: Нови-Сад, Сербия."
 og:
-  title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, опытного Front-end разработчика, специализирующегося на Vue.js, TypeScript и масштабируемых веб-решениях."
+  title: "Дмитрий Куликов – Lead Front-end Engineer"
+  description: "Lead Front-end Engineer с опытом более 6 лет в финтехе, SaaS и e-commerce. Создаю масштабируемые и производительные веб-приложения на Vue.js, TypeScript и с DevOps-практиками."
   locale: "ru"
   image: "https://cv.7t33n.xyz/assets/profile.jpg"
   url: "https://cv.7t33n.xyz"
 twitter:
   card: "summary_large_image"
   site: "@sevent33n"
-  title: "Дмитрий Куликов – Senior Front-end Developer"
-  description: "Резюме и портфолио Дмитрия Куликова, Senior Front-end Developer с опытом в Vue.js, TypeScript и DevOps."
+  title: "Дмитрий Куликов – Lead Front-end Engineer"
+  description: "Lead Front-end Engineer: масштабируемые веб-приложения на Vue.js, TypeScript и DevOps. 6+ лет в финтехе, SaaS и e-commerce."
   image: "https://cv.7t33n.xyz/assets/profile.jpg"
 ---
 # Дмитрий Куликов
@@ -55,7 +55,7 @@ twitter:
 
 ## О себе
 
-Senior Front-end Developer с более чем 6-летним опытом создания продуктов для финтеха, SaaS и e-commerce. Руководил командами, проектировал масштабируемые веб-приложения и оптимизировал процессы разработки. В работе использую Vue.js, TypeScript и современные практики. Мне важны чистый код, эффективные рабочие процессы и развитие коллег.
+Lead Front-end Engineer с более чем 6-летним опытом создания продуктов для финтеха, SaaS и e-commerce. Руководил командами, проектировал масштабируемые веб-приложения и оптимизировал процессы разработки. В работе использую Vue.js, TypeScript и современные практики. Мне важны чистый код, эффективные рабочие процессы и развитие коллег.
 
 - Повысил производительность команды благодаря внедрению Agile и автоматизации рутинных задач.
 - Снизил количество ошибок при деплое после внедрения новой Git-стратегии и CI/CD.    
@@ -65,9 +65,8 @@ Senior Front-end Developer с более чем 6-летним опытом со
 
 ## Навыки
 
-**Front-end**: JavaScript (ES6+), TypeScript (8 лет), Vue.js (10 лет), Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
+**Front-end**: JavaScript (ES6+), TypeScript, Vue.js, Nuxt.js, HTML5, CSS3, PostCSS, SASS/SCSS, Responsive Design, Webpack, Vite, Browser Extensions  
 **Architecture & DevOps**: Monorepo (Turborepo, NX), Docker, Podman, Git, GitHub Actions, SonarCloud, Cloudflare, CI/CD, GCP  
-**Voice & Speech**: Voice Activity Detection (VAD), ONNX Runtime Web, Silero-VAD, Browser Speech APIs, Gemini, Real-time Audio Processing, Speech-to-Text Integration  
 **Back-end**: Node.js, Express.js, REST APIs, GraphQL  
 **LLM Development**: Cursor, OpenCode, prompt engineering для генерации кода  
 **Testing**: Unit, Integration, and E2E Testing  
@@ -171,10 +170,10 @@ _ноябрь 2014 – июнь 2018_
 
 ## Проекты
 
-**[cv.7t33.xyz](https://cv.7t33.xyz) (2025):**  
+**[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
 Создал платформу для резюме на TypeScript и markdown-it, развернул на Cloudflare Pages.
 
-**[7t33.xyz](https://7t33.xyz) (2025):**  
+**[7t33n.xyz](https://7t33n.xyz) (2025):**  
 Запустил технический блог и открытую базу знаний, делюсь советами по веб-разработке и решениями LeetCode.
 
 ---
