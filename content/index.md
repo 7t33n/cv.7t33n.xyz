@@ -49,8 +49,7 @@ twitter:
 **Email:** [dkulikov17@pm.me](mailto:dkulikov17@pm.me)  
 **Telegram:** [@sevent33n](https://t.me/sevent33n)  
 **LinkedIn:** [linkedin.com/in/7t33n](https://linkedin.com/in/7t33n)  
-**GitHub:** [github.com/7t33n](https://github.com/7t33n)  
-**Blog:** [7t33n.xyz](https://7t33n.xyz)
+**GitHub:** [github.com/7t33n](https://github.com/7t33n)
 
 ## Summary
 
@@ -173,9 +172,6 @@ _Nov 2014 – Jun 2018_
 
 **[cv.7t33n.xyz](https://cv.7t33n.xyz) (2025):**  
 Created a resume platform with TypeScript and markdown-it, deployed on Cloudflare Pages.
-
-**[7t33n.xyz](https://7t33n.xyz) (2025):**  
-Launched a technical blog and public knowledge base, sharing web dev tips and LeetCode solutions.
 
 ---
 :::
