@@ -32,6 +32,74 @@ export interface PageMeta {
   };
 }
 
+export interface ContactItem {
+  label: string;
+  text: string;
+  href?: string;
+}
+
+export interface LabeledItem {
+  label: string;
+  value: string;
+}
+
+export interface ResumeRole {
+  title: string;
+  period: string;
+  bullets: string[];
+  quote?: string;
+}
+
+export interface ResumeCompany {
+  name: string;
+  location?: string;
+  remote?: string;
+  roles: ResumeRole[];
+}
+
+export interface ResumeProject {
+  name: string;
+  href: string;
+  year: string;
+  description: string;
+}
+
+export interface ResumeContent {
+  meta: PageMeta;
+  name: string;
+  headings: {
+    contact: string;
+    summary: string;
+    skills: string;
+    leadership: string;
+    experience: string;
+    projects: string;
+    education: string;
+    languages: string;
+  };
+  contact: ContactItem[];
+  summary: {
+    paragraph: string;
+    bullets: string[];
+  };
+  skills: LabeledItem[];
+  leadership: LabeledItem[];
+  experience: ResumeCompany[];
+  projects: ResumeProject[];
+  education: {
+    school: string;
+    locationPeriod: string;
+    courseworkLabel: string;
+    coursework: string;
+  };
+  languages: LabeledItem[];
+}
+
+export interface Locale {
+  en: ResumeContent;
+  ru: ResumeContent;
+}
+
 export interface BuildConfig {
   contentDir: string;
   publicDir: string;
