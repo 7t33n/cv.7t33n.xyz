@@ -3,7 +3,7 @@ import path from "path";
 import { BaseHandler } from "./base.handler";
 import { BuildConfig, HTMLResource, ProcessResult } from "../types";
 import { parseCSS, updateCSSPaths } from "../parsers/css.parser";
-import { cssProcessor } from "../utils/postcssRuntime";
+import { processCSS } from "../utils/cssRuntime";
 
 export class CSSHandler extends BaseHandler {
   canHandle(resource: HTMLResource | string): boolean {
@@ -24,11 +24,9 @@ export class CSSHandler extends BaseHandler {
     const media = metadata?.media;
     const shouldInline = !media || media === "screen" || media === "all";
 
-    const result = await cssProcessor.process(css, {
-      from: fullPath,
-    });
+    const processedCSS = processCSS(css, fullPath);
 
-    const cssResources = parseCSS(result.css);
+    const cssResources = parseCSS(processedCSS);
     const dependencies = cssResources
       .filter((dep) => !dep.isExternal && dep.type === "url")
       .map((dep) => {
@@ -38,7 +36,7 @@ export class CSSHandler extends BaseHandler {
 
     if (shouldInline) {
       const cssDir = path.dirname(sourcePath);
-      const updatedCSS = updateCSSPaths(result.css, cssDir, "");
+      const updatedCSS = updateCSSPaths(processedCSS, cssDir, "");
 
       return {
         content: updatedCSS,
