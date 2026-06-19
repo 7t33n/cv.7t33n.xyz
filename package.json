@@ -33,8 +33,6 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^24.2.1",
     "eslint": "^10.0.0",
-    "eslint-plugin-html": "^8.1.4",
-    "eslint-plugin-markdown": "^5.1.0",
     "globals": "^17.3.0",
     "lightningcss": "^1.32.0",
     "serve": "^14.2.6",

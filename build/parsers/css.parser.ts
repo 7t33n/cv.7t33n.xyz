@@ -39,7 +39,7 @@ export function updateCSSPaths(
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   toDir: string,
 ): string {
-  return css.replace(/url\(["']?([^"')]+)["']?\)/gi, (match, path) => {
+  return css.replace(/url\(["']?([^"')]+)["']?\)/gi, (match: string, path: string) => {
     if (/^(https?:\/\/|data:)/i.test(path)) {
       return match;
     }

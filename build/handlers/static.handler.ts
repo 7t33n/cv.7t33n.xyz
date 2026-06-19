@@ -28,15 +28,12 @@ export class StaticHandler extends BaseHandler {
     return ["image", "icon", "manifest"].includes(resource.type);
   }
 
-  async process(
-    sourcePath: string,
-    config: BuildConfig,
-  ): Promise<ProcessResult> {
+  process(sourcePath: string, config: BuildConfig): Promise<ProcessResult> {
     const outputPath = path.join(config.outDir, sourcePath);
 
-    return {
+    return Promise.resolve({
       outputPath,
       dependencies: [],
-    };
+    });
   }
 }

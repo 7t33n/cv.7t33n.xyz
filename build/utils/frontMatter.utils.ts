@@ -1,6 +1,6 @@
 import { FrontMatterResult } from "../types";
 
-export async function parseFrontMatter(md: string): Promise<FrontMatterResult> {
+export function parseFrontMatter(md: string): FrontMatterResult {
   const fmMatch = md.match(/^---\s*([\s\S]*?)\s*---\s*\n?/);
 
   if (!fmMatch) {

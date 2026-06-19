@@ -1,10 +1,8 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
-import markdown from "eslint-plugin-markdown";
-import html from "eslint-plugin-html";
 
-export default [
+export default tseslint.config(
   {
     ignores: ["dist/", "node_modules/", ".git/", "public/assets/"],
   },
@@ -16,9 +14,15 @@ export default [
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
-  ...markdown.configs.recommended,
+  // Type-aware linting for project source files (those covered by tsconfig.json).
   {
-    files: ["**/*.html"],
-    plugins: { html },
+    files: ["build/**/*.ts"],
+    extends: [...tseslint.configs.recommendedTypeChecked],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
   },
-];
+);
