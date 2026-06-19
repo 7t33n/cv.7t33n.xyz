@@ -1,5 +1,4 @@
 import { FrontMatterResult } from "../types";
-import { load as loadYaml } from "js-yaml";
 
 export async function parseFrontMatter(md: string): Promise<FrontMatterResult> {
   const fmMatch = md.match(/^---\s*([\s\S]*?)\s*---\s*\n?/);
@@ -12,7 +11,7 @@ export async function parseFrontMatter(md: string): Promise<FrontMatterResult> {
   const body = md.slice(fmMatch[0].length);
 
   try {
-    const frontMatter = (await loadYaml(fm)) as Record<string, unknown> | null;
+    const frontMatter = Bun.YAML.parse(fm) as Record<string, unknown> | null;
 
     if (typeof frontMatter === "object" && frontMatter !== null) {
       return { body, ...frontMatter };
