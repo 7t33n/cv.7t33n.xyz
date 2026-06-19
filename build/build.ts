@@ -8,6 +8,7 @@ import { parseFrontMatter } from "./utils/frontMatter.utils";
 import { fileExists, findFiles } from "./utils/fs.utils";
 import { loadTemplate } from "./utils/template.utils";
 import { processAssets } from "./core/asset-processor";
+import { compressHtmlOutputs } from "./core/compression";
 import { createMarkdownIt } from "./utils/markdown";
 
 async function validateConfig(config: BuildConfig): Promise<void> {
@@ -148,6 +149,8 @@ async function build() {
     await copyFiles(copiedFiles, config);
 
     await processMarkdownFiles(config, mdFiles, md, updatedHTML);
+
+    await compressHtmlOutputs(config.outDir);
 
     console.log("Build completed successfully!");
   } catch (err) {
