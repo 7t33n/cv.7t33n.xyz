@@ -1,6 +1,35 @@
-export interface FrontMatterResult {
-  body: string;
-  [key: string]: string | boolean | number | string[];
+import type { VNode } from "@/jsx/types";
+
+export interface ContentModule {
+  default: () => VNode;
+  meta?: PageMeta;
+}
+
+export interface PageMeta {
+  title: string;
+  description: string;
+  email: string;
+  linkedin: string;
+  github: string;
+  website: string;
+  image: string;
+  keywords?: string;
+  summary?: string;
+  tags?: string[];
+  og: {
+    title: string;
+    description: string;
+    locale: string;
+    image: string;
+    url: string;
+  };
+  twitter: {
+    card: string;
+    site: string;
+    title: string;
+    description: string;
+    image: string;
+  };
 }
 
 export interface BuildConfig {

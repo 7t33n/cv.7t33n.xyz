@@ -1,9 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
 import { BaseHandler } from "./base.handler";
-import { BuildConfig, HTMLResource, ProcessResult } from "../types";
-import { parseCSS, updateCSSPaths } from "../parsers/css.parser";
-import { processCSS } from "../utils/cssRuntime";
+import { BuildConfig, HTMLResource, ProcessResult } from "@/types";
+import { parseCSS, updateCSSPaths } from "@/parsers/css.parser";
+import { processCSS } from "@/utils/cssRuntime";
 
 export class CSSHandler extends BaseHandler {
   canHandle(resource: HTMLResource | string): boolean {

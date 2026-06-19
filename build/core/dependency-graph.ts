@@ -1,5 +1,5 @@
 import path from "path";
-import { AssetHandler, BuildConfig, ProcessResult } from "../types";
+import { AssetHandler, BuildConfig, ProcessResult } from "@/types";
 
 export class DependencyGraph {
   private processed = new Set<string>();

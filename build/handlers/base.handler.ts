@@ -1,4 +1,4 @@
-import { AssetHandler, HTMLResource, ProcessResult } from "../types";
+import { AssetHandler, HTMLResource, ProcessResult } from "@/types";
 
 export abstract class BaseHandler implements AssetHandler {
   abstract canHandle(resource: HTMLResource | string): boolean;

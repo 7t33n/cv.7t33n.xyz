@@ -4,19 +4,26 @@
     "lib": [
       "ES2021"
     ],
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "outDir": "dist",
-    "rootDir": "build",
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@/jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./build/*"]
+    }
   },
   "include": [
-    "build"
+    "build",
+    "content"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

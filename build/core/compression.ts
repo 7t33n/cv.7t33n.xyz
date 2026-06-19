@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import zlib from "node:zlib";
 import { promisify } from "node:util";
-import { findFiles } from "../utils/fs.utils";
+import { findFiles } from "@/utils/fs.utils";
 
 const brotliCompress = promisify(zlib.brotliCompress);
 

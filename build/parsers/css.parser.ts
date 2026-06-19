@@ -1,4 +1,4 @@
-import { CSSResource } from "../types";
+import { CSSResource } from "@/types";
 
 export function parseCSS(css: string): CSSResource[] {
   const resources: CSSResource[] = [];

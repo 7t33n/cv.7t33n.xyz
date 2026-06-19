@@ -1,15 +1,14 @@
 import fs from "fs/promises";
 import { Buffer } from "node:buffer";
 import path from "path";
-import type MarkdownIt from "markdown-it";
 import { minify } from "@minify-html/node";
-import { BuildConfig } from "./types";
-import { parseFrontMatter } from "./utils/frontMatter.utils";
-import { fileExists, findFiles } from "./utils/fs.utils";
-import { loadTemplate } from "./utils/template.utils";
-import { processAssets } from "./core/asset-processor";
-import { compressHtmlOutputs } from "./core/compression";
-import { createMarkdownIt } from "./utils/markdown";
+import { BuildConfig, ContentModule } from "@/types";
+import { jsx } from "@/jsx/jsx-runtime";
+import { renderToString } from "@/jsx/render";
+import { fileExists, findFiles } from "@/utils/fs.utils";
+import { loadTemplate } from "@/utils/template.utils";
+import { processAssets } from "@/core/asset-processor";
+import { compressHtmlOutputs } from "@/core/compression";
 
 async function validateConfig(config: BuildConfig): Promise<void> {
   const errors: string[] = [];
@@ -47,24 +46,28 @@ async function validateConfig(config: BuildConfig): Promise<void> {
   }
 }
 
-async function processMarkdownFiles(
+async function processContentFiles(
   config: BuildConfig,
-  mdFiles: string[],
-  md: MarkdownIt,
+  contentFiles: string[],
   processedTemplate: string,
 ): Promise<void> {
-  console.log("Processing markdown files...");
+  console.log("Processing content files...");
 
   await Promise.all(
-    mdFiles.map(async (filePath) => {
+    contentFiles.map(async (filePath) => {
       try {
-        const mdRaw = await fs.readFile(filePath, "utf8");
-        const { body, ...params } = parseFrontMatter(mdRaw);
-        const contentHtml = md.render(body);
+        const mod = (await import(filePath)) as ContentModule;
+        const Page = mod.default;
+
+        if (typeof Page !== "function") {
+          throw new Error(`No default-exported component in ${filePath}`);
+        }
+
+        const contentHtml = renderToString(jsx(Page, {}));
 
         const templateVars = {
           content: contentHtml,
-          ...params,
+          ...(mod.meta ?? {}),
         };
 
         const html = await loadTemplate(processedTemplate, templateVars, true);
@@ -124,17 +127,15 @@ async function build() {
     await fs.rm(config.outDir, { recursive: true, force: true });
     await fs.mkdir(config.outDir, { recursive: true });
 
-    const md = createMarkdownIt();
+    console.log("Finding content files...");
+    const contentFiles = await findFiles(config.contentDir, ".tsx");
 
-    console.log("Finding markdown files...");
-    const mdFiles = await findFiles(config.contentDir, ".md");
-
-    if (mdFiles.length === 0) {
-      console.warn("No markdown files found in content directory");
+    if (contentFiles.length === 0) {
+      console.warn("No content files found in content directory");
       return;
     }
 
-    console.log(`Found ${mdFiles.length} markdown files`);
+    console.log(`Found ${contentFiles.length} content files`);
 
     console.log("Processing assets...");
     const templatePath = path.join(config.publicDir, config.templateFile);
@@ -148,7 +149,7 @@ async function build() {
 
     await copyFiles(copiedFiles, config);
 
-    await processMarkdownFiles(config, mdFiles, md, updatedHTML);
+    await processContentFiles(config, contentFiles, updatedHTML);
 
     await compressHtmlOutputs(config.outDir);
 

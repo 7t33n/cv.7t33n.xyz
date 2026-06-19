@@ -1,13 +1,13 @@
 import fs from "fs/promises";
-import { BuildConfig, ProcessedAssets } from "../types";
+import { BuildConfig, ProcessedAssets } from "@/types";
 import {
   parseHTML,
   isExternalPath,
   isTemplateVariable,
   normalizePath,
-} from "../parsers/html.parser";
+} from "@/parsers/html.parser";
 import { DependencyGraph } from "./dependency-graph";
-import { CSSHandler, StaticHandler, SVGHandler } from "../handlers";
+import { CSSHandler, StaticHandler, SVGHandler } from "@/handlers";
 
 export async function processAssets(
   templatePath: string,

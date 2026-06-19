@@ -1,4 +1,4 @@
-import { HTMLResource } from "../types";
+import { HTMLResource } from "@/types";
 
 export function parseHTML(html: string): HTMLResource[] {
   const resources: HTMLResource[] = [];

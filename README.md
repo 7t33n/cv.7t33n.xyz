@@ -4,14 +4,14 @@
 
 This repository hosts the source code for my online resume, available at [cv.7t33n.xyz](https://cv.7t33n.xyz).
 
-It is a static site generator built with **Bun** and **TypeScript**, which compiles content from Markdown files into HTML.
+It is a static site generator built with **Bun** and **TypeScript**, which renders content from TSX component files into static HTML at build time (no client-side JS shipped).
 
 ## 🚀 Tech Stack
 
 * **Runtime & Build Tool:** [Bun](https://bun.sh/)
 * **Language:** TypeScript
-* **Content:** Markdown
-* **Dependencies:** `markdown-it`
+* **Content:** TSX components rendered via a tiny build-time JSX runtime (`build/jsx/`)
+* **Dependencies:** none for rendering — zero-dependency `h()`/`renderToString`
 
 ## ⚙️ Setup and Run
 

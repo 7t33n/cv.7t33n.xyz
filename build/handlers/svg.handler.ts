@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { optimize } from "svgo";
 import { BaseHandler } from "./base.handler";
-import { BuildConfig, HTMLResource, ProcessResult } from "../types";
+import { BuildConfig, HTMLResource, ProcessResult } from "@/types";
 
 export class SVGHandler extends BaseHandler {
   canHandle(resource: HTMLResource | string): boolean {

@@ -1,6 +1,6 @@
 import path from "path";
 import { BaseHandler } from "./base.handler";
-import { BuildConfig, HTMLResource, ProcessResult } from "../types";
+import { BuildConfig, HTMLResource, ProcessResult } from "@/types";
 
 export class StaticHandler extends BaseHandler {
   canHandle(resource: HTMLResource | string): boolean {
