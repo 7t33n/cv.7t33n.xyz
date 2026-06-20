@@ -49,11 +49,11 @@ async function validateConfig(config: BuildConfig): Promise<void> {
 async function processContentFiles(
   config: BuildConfig,
   contentFiles: string[],
-  processedTemplate: string,
-): Promise<void> {
+  template: string,
+): Promise<Array<{ src: string; dest: string }>> {
   console.log("Processing content files...");
 
-  await Promise.all(
+  const copiedFiles = await Promise.all(
     contentFiles.map(async (filePath) => {
       try {
         const mod = (await import(filePath)) as ContentModule;
@@ -70,7 +70,12 @@ async function processContentFiles(
           ...(mod.meta ?? {}),
         };
 
-        const html = await loadTemplate(processedTemplate, templateVars, true);
+        const composedHtml = await loadTemplate(template, templateVars, true);
+
+        const { updatedHTML, copiedFiles } = await processAssets(
+          composedHtml,
+          config,
+        );
 
         const relativePath = path.relative(config.contentDir, filePath);
         const { dir, name } = path.parse(relativePath);
@@ -80,13 +85,23 @@ async function processContentFiles(
         const outPath = path.join(outDir, outName);
 
         await fs.mkdir(outDir, { recursive: true });
-        await fs.writeFile(outPath, minify(Buffer.from(html), {}), "utf8");
+        await fs.writeFile(outPath, minify(Buffer.from(updatedHTML), {}), "utf8");
         console.log(`Built: ${path.relative(process.cwd(), outPath)}`);
+
+        return copiedFiles;
       } catch (error) {
         console.error(`Error processing ${filePath}:`, error);
+        return [];
       }
     }),
   );
+
+  const deduped = new Map<string, { src: string; dest: string }>();
+  for (const file of copiedFiles.flat()) {
+    deduped.set(file.dest, file);
+  }
+
+  return [...deduped.values()];
 }
 
 async function copyFiles(
@@ -137,19 +152,18 @@ async function build() {
 
     console.log(`Found ${contentFiles.length} content files`);
 
-    console.log("Processing assets...");
     const templatePath = path.join(config.publicDir, config.templateFile);
-    const { copiedFiles, updatedHTML } = await processAssets(
-      templatePath,
+    const template = await fs.readFile(templatePath, "utf-8");
+
+    const copiedFiles = await processContentFiles(
       config,
+      contentFiles,
+      template,
     );
 
-    console.log(`Inlined CSS into template`);
     console.log(`Found ${copiedFiles.length} files to copy`);
 
     await copyFiles(copiedFiles, config);
-
-    await processContentFiles(config, contentFiles, updatedHTML);
 
     await compressHtmlOutputs(config.outDir);
 

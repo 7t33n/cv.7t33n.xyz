@@ -1,4 +1,8 @@
 export { Company, type CompanyProps } from "./Company";
+export { Footer } from "./Footer";
+export { Header, type HeaderProps } from "./Header";
+export { Layout, type LayoutProps } from "./Layout";
+export { Main, type MainProps } from "./Main";
 export { NoPrint, type NoPrintProps } from "./NoPrint";
 export { Quote, type QuoteProps } from "./Quote";
 export { Resume, type ResumeProps } from "./Resume";

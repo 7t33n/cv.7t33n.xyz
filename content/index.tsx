@@ -1,5 +1,5 @@
 import type { Locale, PageMeta } from "@/types";
-import { Resume } from "@/components";
+import { Layout, Resume } from "@/components";
 import localeData from "./locale.json";
 
 const data = (localeData as Locale).en;
@@ -7,5 +7,9 @@ const data = (localeData as Locale).en;
 export const meta: PageMeta = data.meta;
 
 export default function Page() {
-  return <Resume data={data} />;
+  return (
+    <Layout title={data.meta.title}>
+      <Resume data={data} />
+    </Layout>
+  );
 }

@@ -1,4 +1,3 @@
-import fs from "fs/promises";
 import { BuildConfig, ProcessedAssets } from "@/types";
 import {
   parseHTML,
@@ -10,11 +9,9 @@ import { DependencyGraph } from "./dependency-graph";
 import { CSSHandler, StaticHandler, SVGHandler } from "@/handlers";
 
 export async function processAssets(
-  templatePath: string,
+  templateContent: string,
   config: BuildConfig,
 ): Promise<ProcessedAssets> {
-  const templateContent = await fs.readFile(templatePath, "utf-8");
-
   const resources = parseHTML(templateContent);
 
   const handlers = [new CSSHandler(), new SVGHandler(), new StaticHandler()];
