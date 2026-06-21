@@ -4,7 +4,7 @@ import path from "path";
 import { minify } from "@minify-html/node";
 import { BuildConfig, ContentModule } from "@/types";
 import { jsx } from "@/jsx/jsx-runtime";
-import { renderToString } from "@/jsx/render";
+import { renderChild } from "@/jsx/render";
 import { fileExists, findFiles } from "@/utils/fs.utils";
 import { loadTemplate } from "@/utils/template.utils";
 import { processAssets } from "@/core/asset-processor";
@@ -63,7 +63,7 @@ async function processContentFiles(
           throw new Error(`No default-exported component in ${filePath}`);
         }
 
-        const contentHtml = renderToString(jsx(Page, {}));
+        const contentHtml = renderChild(jsx(Page, {}));
 
         const templateVars = {
           content: contentHtml,
@@ -85,7 +85,11 @@ async function processContentFiles(
         const outPath = path.join(outDir, outName);
 
         await fs.mkdir(outDir, { recursive: true });
-        await fs.writeFile(outPath, minify(Buffer.from(updatedHTML), {}), "utf8");
+        await fs.writeFile(
+          outPath,
+          minify(Buffer.from(updatedHTML), {}),
+          "utf8",
+        );
         console.log(`Built: ${path.relative(process.cwd(), outPath)}`);
 
         return copiedFiles;

@@ -116,7 +116,7 @@ function renderNode(node: VNode): string {
   return `<${tag}${attrs}>${inner}</${tag}>`;
 }
 
-function renderChild(child: Child): string {
+export function renderChild(child: Child): string {
   if (child == null || child === false || child === true) {
     return "";
   }
@@ -130,8 +130,4 @@ function renderChild(child: Child): string {
     return escapeText(String(child));
   }
   return renderNode(child);
-}
-
-export function renderToString(node: Child): string {
-  return renderChild(node);
 }

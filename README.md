@@ -11,7 +11,7 @@ It is a static site generator built with **Bun** and **TypeScript**, which rende
 * **Runtime & Build Tool:** [Bun](https://bun.sh/)
 * **Language:** TypeScript
 * **Content:** TSX components rendered via a tiny build-time JSX runtime (`build/jsx/`)
-* **Dependencies:** none for rendering — zero-dependency `h()`/`renderToString`
+* **Dependencies:** none for rendering — zero-dependency `h()`/`renderChild`
 
 ## ⚙️ Setup and Run
 
